@@ -144,7 +144,7 @@ li>a:hover{
 /* header  изображение*/
   .header-image{
     height: 39em;
-    background-image: url(./image/image-start-page1.jpg);
+    background-image: url(../image/image-start-page1.jpg);
     background-position: left;
     background-size: cover
 }
@@ -510,7 +510,7 @@ footer>section>form>input[type="submit"]:hover{
     }
 
     footer>section>form>input[type="submit"]{
-      background: url(./image/icon-input.png) no-repeat;
+      background: url(../image/icon-input.png) no-repeat;
       height: 2.5em;
       color: transparent;
       border: none;
