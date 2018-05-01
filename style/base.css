@@ -326,7 +326,7 @@ footer form>input[type="email"]{
 }
 
 footer>section>form>input[type="submit"]{
-  background: url(./image/icon-input.png) no-repeat;
+  background: url(../image/icon-input.png) no-repeat;
   height: 2.5em;
   color: transparent;
   border: none;
@@ -463,69 +463,7 @@ footer>section>form>input[type="submit"]:hover{
       justify-content: space-between;
       flex-direction: row-reverse;
     }
-    footer>section a{
-      color:inherit;
-    }
-    footer>section a:hover{
-      color:white;
 
-    }
-    footer>section h1{
-      margin-top:0;
-    }
-
-    footer>section{
-      padding:1em 2.5em;
-
-    }
-    footer>section:first-child{
-      /* background-image: linear-gradient(#464545 -10%, #5d5959 20%,#5d5959  80%,#464545 110% ); */
-      background-color:#5d5959 ;
-
-    }
-    footer{
-      background-color:#464545;
-      color:#cccccc;
-    }
-
-    footer>section span{
-      display: inline-table;
-      padding: 0.5em 0;
-
-
-    }
-    footer>section>h1{
-      text-decoration: underline;
-      color: white;
-
-    }
-    footer form>input[type="email"]{
-      border: solid;
-      border-color: white;
-      background: none;
-      color: white;
-      padding: 0.5em;
-      font-size: 1em;
-      outline: none
-    }
-
-    footer>section>form>input[type="submit"]{
-      background: url(../image/icon-input.png) no-repeat;
-      height: 2.5em;
-      color: transparent;
-      border: none;
-      background-size: contain;
-      cursor: pointer;
-      margin-left: 1em;
-      width: 2.5em;
-      transition: background-position 0.2s ease-out;
-
-
-    }
-    footer>section>form>input[type="submit"]:hover{
-      background-position: right;
-
-    }
   }
 
   }
