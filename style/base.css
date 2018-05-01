@@ -1,0 +1,538 @@
+:root{
+  --polaroidColor-1:#fd0081;
+  --polaroidColor-2:#ff7f12;
+  --polaroidColor-3:#ffc500;
+  --polaroidColor-4:#f6fe13;
+  --polaroidColor-5:#00d120;
+  --polaroidColor-6:#0077c3;
+  --backgroundQuotColor:rgba(245, 242, 242, 0.5);
+}
+
+
+body{
+  margin: 0 auto;
+  font-family: helvetica;
+  background-color:#fdf7eb;
+  min-width: 480px;
+  max-width: 620px;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.header-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+}
+img[alt="polaroid_logo"]{
+  height: 1.7em;
+  padding-left: 1.5em;
+}
+/* кнопка поиск */
+
+input[name="search"]{
+  width: 10em;
+  border-radius: 1em;
+  text-indent: 0.7em;
+  padding: 0.2em;
+  border:1px solid black;
+}
+input[name="search"]:focus{
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+}
+.header-top button{
+  border:0 0 0 1px solid #464545;
+  padding: 0.2em;
+  border-radius: 0 1em 1em 0;
+  text-align: left;
+  text-indent: 0.06em;
+  width: 2em;
+  cursor: pointer;
+  position: relative;
+  right: 2.4em;
+  color: #464545;
+}
+input[name="search"],.header-top button{
+  border:1px solid #464545;
+  outline: none;
+  height: 2em;
+}
+
+/* мню навигации */
+nav{
+  background-image: linear-gradient(#464545 -10%, #5d5959 20%,#5d5959  80%,#464545 110% );
+  padding:0;
+}
+nav>ul{
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+  margin: 0;
+}
+nav>ul>li{
+  padding: 0.5em;
+  border: 3px solid transparent;
+
+  width: 100%;
+  text-align: center;
+  transition-property: border-image;
+  transition-duration: 2s;
+
+}
+nav>ul>li:nth-child(1):hover{
+  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-1) 50%, transparent 100%) 1;
+}
+nav>ul>li:nth-child(2):hover{
+  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-2) 50%, transparent 100%) 1;
+}
+nav>ul>li:nth-child(3):hover{
+  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-3) 50%, transparent 100%) 1;
+}
+nav>ul>li:nth-child(4):hover{
+  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-4) 50%, transparent 100%) 1;
+}
+nav>ul>li:nth-child(5):hover{
+  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-5) 50%, transparent 100%) 1;
+}
+nav>ul>li:nth-child(6):hover{
+  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-6) 50%, transparent 100%) 1;
+}
+
+
+
+
+
+
+
+
+/* nav>ul>li::after{
+  content: 'ggggg';
+  border-bottom: 2px solid;
+  width:inherit;
+} */
+/* nav>ul>li:nth-child(1):hover{
+  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-1) 50%, transparent 100%) 1;
+  transform-origin: center;
+  /* border-color: var(--polaroidColor-1); */ */
+
+}
+nav::before{
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-size: 2em;
+  padding: 0.5em;
+  color: #cccccc;
+}
+nav:hover>ul{
+  display: flex;
+}
+
+li>a{
+  color: #cccccc;
+}
+li>a:hover{
+  color:white;
+}
+
+/* header  изображение*/
+  .header-image{
+    height: 39em;
+    background-image: url(./image/image-start-page1.jpg);
+    background-position: left;
+    background-size: cover
+}
+  .header-image>h1{
+    position: relative;
+    top: 4.2em;
+    padding-left: 1em;
+    width: 50vw;
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+    animation: text 20s ease-in-out infinite;
+}
+
+@keyframes text{
+  15%{color:#fd0081;}
+  29%{color:#ff7f12;}
+  43%{color:#ffc500;}
+  57%{color:#f6fe13;}
+  71%{color:#00d120;}
+  85%{color:#0077c3;}
+
+}
+
+ .header-image>p{
+   margin: 0;
+   font-size: 7.5em;
+   position: relative;
+   top: 3.7em;
+   color: #cccccc;
+   opacity: 0.3;
+   text-align: center;
+
+}
+
+.colorPolaroid{
+  position: relative;
+  height: 4em;
+  background-image: linear-gradient(var(--polaroidColor-1) 0%, var(--polaroidColor-1) 17%, var(--polaroidColor-2) 17%, var(--polaroidColor-2) 33.5%, var(--polaroidColor-3) 33.5%, var(--polaroidColor-3)  50%, var(--polaroidColor-4)  50%, var(--polaroidColor-4)  66.5%, var(--polaroidColor-5)  66.5%, var(--polaroidColor-5)  83%, var(--polaroidColor-6)  83%,  var(--polaroidColor-6)  100%);
+}
+
+/* основная часть */
+
+  article{
+  padding: 2em 0;
+}
+
+article section{
+  background-color: black;
+  width: 80%;
+  height: 24em;
+  margin:3em auto;
+  border: 1.5em solid white;
+  border-bottom: 4.5em solid white;
+  overflow: hidden;
+  box-shadow: 0 0 60px 0 rgba(0,0,0,0.18);
+}
+ article section>h1{
+  position: absolute;
+  color: black;
+  padding-top: 15.8em;
+  font-size: 1.5em;
+  width: 100%;
+  transition-duration: 0.5s;
+}
+article section>h1:hover{
+  transform: scaleX(1.1);
+  transition: 0.5s;
+  transform-origin: 0 100%;
+}
+
+
+article section>h1>a>span::after{
+  content: "\f0a9";
+  font-family: FontAwesome;
+  font-size: 0.8em;
+  padding-left: 0.8em;
+}
+article section:nth-child(1) h1>a:hover{
+  color:var(--polaroidColor-1);
+}
+article section:nth-child(2) h1>a:hover{
+  color:var(--polaroidColor-2);
+}
+article section:nth-child(3) h1>a:hover{
+  color:var(--polaroidColor-3);
+}
+article section:nth-child(4) h1>a:hover{
+  color:var(--polaroidColor-4);
+}
+article section:nth-child(5) h1>a:hover{
+  color:var(--polaroidColor-5);
+}
+
+
+figure{
+  margin:0 auto;
+  height:inherit;
+}
+figure>img{
+  display:block;
+  height:inherit;
+  margin: inherit;
+}
+
+
+
+.quote-history{
+  position: relative;
+  background-color: var(--backgroundQuotColor);
+  height: 100%;
+  transition-duration:0.5s;
+
+}
+article>section:hover .quote-history{
+  transform:translateY(-24em);
+  transition-duration:0.5s;
+
+}
+blockquote, .quote-history p{
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+  padding: 6em 1em;
+  line-height: 1.7em;
+}
+cite{
+  padding-left: 13em;
+  top: -4em;
+  position: relative;
+}
+
+/* низ */
+
+footer>section a{
+  color:inherit;
+}
+footer>section a:hover{
+  color:white;
+
+}
+footer>section h1{
+  margin-top:0;
+}
+
+footer>section{
+  padding:1em 2.5em;
+
+}
+footer>section:first-child{
+  /* background-image: linear-gradient(#464545 -10%, #5d5959 20%,#5d5959  80%,#464545 110% ); */
+  background-color:#5d5959 ;
+
+}
+footer{
+  background-color:#464545;
+  color:#cccccc;
+}
+
+footer>section span{
+  display: inline-table;
+  padding: 0.5em 0;
+
+
+}
+footer>section>h1{
+  text-decoration: underline;
+  color: white;
+
+}
+footer form>input[type="email"]{
+  border: solid;
+  border-color: white;
+  background: none;
+  color: white;
+  padding: 0.5em;
+  font-size: 1em;
+  outline: none
+}
+
+footer>section>form>input[type="submit"]{
+  background: url(./image/icon-input.png) no-repeat;
+  height: 2.5em;
+  color: transparent;
+  border: none;
+  background-size: contain;
+  cursor: pointer;
+  margin-left: 1em;
+  width: 2.5em;
+  transition: background-position 0.2s ease-out;
+
+
+}
+footer>section>form>input[type="submit"]:hover{
+  background-position: right;
+
+}
+
+  @media screen and (min-width: 620px){
+    body{
+      min-width: 780px;
+      max-width: 1000px;
+    }
+    /* мню навигации */
+    nav{
+      font-size: 0.9em;
+    }
+    nav>ul{
+      display: flex;
+      flex-direction: row;
+      justify-content:flex-end;
+      padding: 0
+    }
+    nav>ul>li{
+      width:auto;
+      padding:0.5em 1em;
+    }
+    nav::before{
+    display: none;
+    }
+    /* header  изображение*/
+    .header-image{
+      background-image: url(../image/image-start-page2.jpg);
+      background-position: right;
+    }
+
+    .header-image>h1{
+      width: auto;
+    }
+
+
+     .header-image>p{
+       font-size: 11em;
+       position: relative;
+       top: 2.6em;
+    }
+
+    /* основная часть */
+
+      article{
+      padding: 0;
+    }
+
+    article section{
+      background-size: cover;
+      width: 100%;
+      height: 32em;
+      border:none;
+      box-shadow: 0em 0em 6px 0.1em rgba(0, 0, 0, 0.6)
+    }
+    article section:nth-child(1){
+      background-image: url(../background/background-history.jpg);
+    }
+    article section:nth-child(2){
+      background-image: url(../background/background-facts.jpg);
+    }
+    article section:nth-child(3){
+      background-image: url(../background/background-cameras.jpg);
+    }
+    article section:nth-child(4){
+      background-image: url(../background/background-gallery.jpg);
+    }
+    article section:nth-child(5){
+      background-image: url(../background/background-tehnology.jpg);
+    }
+
+
+    article section>h1{
+      width: 23em;
+      height: auto;
+      padding: 0.5em;
+      margin: 27em 0em 0em 30em;
+      text-align: center;
+      background-color: var(--backgroundQuotColor);
+      font-size: 1em;
+    }
+    article section>h1:hover{
+      transform-origin: 50% 50%;
+    }
+
+
+    figure{
+      margin:4em;
+    }
+    figure>img{
+      margin: 0;
+      height:15em;
+      border: 1.5em solid white;
+      border-bottom: 4.5em solid white;
+      box-shadow: 0 0 60px 0 rgba(0,0,0,0.18);
+    }
+    figcaption{
+      position: relative;
+      top: -3em;
+      padding-left: 2em;
+      font-style: italic;
+
+    }
+
+
+
+    .quote-history{
+      height: 21em;
+      margin:4em;
+      width: 24em;
+    }
+
+    article>section:hover .quote-history{
+      transform:translate(26em,-36em);
+    }
+
+/* низ */
+
+    footer{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    footer>section a{
+      color:inherit;
+    }
+    footer>section a:hover{
+      color:white;
+
+    }
+    footer>section h1{
+      margin-top:0;
+    }
+
+    footer>section{
+      padding:1em 2.5em;
+
+    }
+    footer>section:first-child{
+      /* background-image: linear-gradient(#464545 -10%, #5d5959 20%,#5d5959  80%,#464545 110% ); */
+      background-color:#5d5959 ;
+
+    }
+    footer{
+      background-color:#464545;
+      color:#cccccc;
+    }
+
+    footer>section span{
+      display: inline-table;
+      padding: 0.5em 0;
+
+
+    }
+    footer>section>h1{
+      text-decoration: underline;
+      color: white;
+
+    }
+    footer form>input[type="email"]{
+      border: solid;
+      border-color: white;
+      background: none;
+      color: white;
+      padding: 0.5em;
+      font-size: 1em;
+      outline: none
+    }
+
+    footer>section>form>input[type="submit"]{
+      background: url(./image/icon-input.png) no-repeat;
+      height: 2.5em;
+      color: transparent;
+      border: none;
+      background-size: contain;
+      cursor: pointer;
+      margin-left: 1em;
+      width: 2.5em;
+      transition: background-position 0.2s ease-out;
+
+
+    }
+    footer>section>form>input[type="submit"]:hover{
+      background-position: right;
+
+    }
+  }
+
+  }
+
+
+
+
+}
+
+</style>
