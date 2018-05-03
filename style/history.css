@@ -1,3 +1,6 @@
+body{
+  min-width: 500px;
+}
 .main-history img, .main-history iframe, .empty{
   height: 22em;
   width: auto;
@@ -12,6 +15,8 @@
   background-color: black;
   transform: rotate(-13deg);
   transform-origin: top right;
+  position: relative;
+  right: 2em;
 }
 .main-history nav>ul{
   display: flex;
@@ -38,8 +43,7 @@
 }
 .main-history{
     background-image: url(../background/background-history-2.jpg);
-    background-attachment: fixed;
-    background-size:cover;
+    background-size:contain;
 }
 
 .header-section-hisrory>h1 {
@@ -59,7 +63,6 @@
     display: flex;
     color: #eeee;
     justify-content: flex-start;
-    align-items: center;
 }
 .main-history article section{
   padding-bottom:4em;
