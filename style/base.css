@@ -69,12 +69,14 @@ body>header nav{
 }
 body>header nav>ul{
   list-style-type: none;
-  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1em;
   margin: 0;
+}
+body>header nav>ul{
+  display: none;
 }
 body>header nav>ul>li{
   padding: 0.5em;

@@ -1,7 +1,89 @@
-.main-history img{
-    height: 20em;
-    width: auto;
-    border: 1em solid;
-    border-bottom: 3em solid;
-    border-color: white;
+.main-history img, .main-history iframe, .empty{
+  height: 22em;
+  width: auto;
+  border: 1em solid;
+  border-bottom: 3em solid;
+  border-color: white;
+  margin-top: 5em;
+  box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75), 14px 16px 37px -3px rgba(0,0,0,0.75);
+}
+.empty{
+  width: 20em;
+  background-color: black;
+  transform: rotate(-13deg);
+  transform-origin: top right;
+}
+.main-history nav>ul{
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+  margin: 0;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.main-history nav>ul>li:not(:last-child){
+    border-right: 1px solid black;
+    padding-right: 0.5em;
+}
+.main-history nav>ul>li{
+  padding-left: 0.5em;
+}
+.main-history header{
+  position: sticky;
+  top: 1px;
+  background-color: rgba(204, 204, 204, 0.5);
+  padding: 1em;
+  z-index: 3;
+}
+.main-history{
+    background-image: url(../background/background-history-2.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+.header-section-hisrory>h1 {
+    margin: 0.5em;
+    font-size: 3em;
+    color: white;
+    font-family: 'Caveat', cursive;
+}
+.header-section-hisrory>p{
+  margin: 1em 1em 0 1em;
+  border-left: 2px solid;
+  padding-left: 1em;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5em;
+}
+.header-section-hisrory{
+    display: flex;
+    color: #eeee;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main-history article section{
+  padding-bottom:4em;
+}
+.image{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+.image::before, .image::after{
+  content: '';
+  height: 8em;
+  width: 3em;
+  background-color: rgba(74, 198, 44, 0.98);
+  display: block;
+  filter: blur(0.75px);
+  box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+}
+.image::before {
+    transform: rotate(48deg);
+    transform-origin: bottom left;
+}
+.image::after{
+  transform: rotate(-48deg);
+  transform-origin: bottom right;
 }
