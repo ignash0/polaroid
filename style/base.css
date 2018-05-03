@@ -63,11 +63,11 @@ input[name="search"],.header-top button{
 }
 
 /* мню навигации */
-nav{
+body>header nav{
   background-image: linear-gradient(#464545 -10%, #5d5959 20%,#5d5959  80%,#464545 110% );
   padding:0;
 }
-nav>ul{
+body>header nav>ul{
   list-style-type: none;
   display: none;
   flex-direction: column;
@@ -76,61 +76,41 @@ nav>ul{
   padding-bottom: 1em;
   margin: 0;
 }
-nav>ul>li{
+body>header nav>ul>li{
   padding: 0.5em;
   border: 3px solid transparent;
-
   width: 100%;
   text-align: center;
   transition-property: border-image;
   transition-duration: 2s;
-
 }
-nav>ul>li:nth-child(1):hover{
+body>header nav>ul>li:nth-child(1):hover{
   border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-1) 50%, transparent 100%) 1;
 }
-nav>ul>li:nth-child(2):hover{
+body>header nav>ul>li:nth-child(2):hover{
   border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-2) 50%, transparent 100%) 1;
 }
-nav>ul>li:nth-child(3):hover{
+body>header nav>ul>li:nth-child(3):hover{
   border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-3) 50%, transparent 100%) 1;
 }
-nav>ul>li:nth-child(4):hover{
+body>header nav>ul>li:nth-child(4):hover{
   border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-4) 50%, transparent 100%) 1;
 }
-nav>ul>li:nth-child(5):hover{
+body>header nav>ul>li:nth-child(5):hover{
   border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-5) 50%, transparent 100%) 1;
 }
-nav>ul>li:nth-child(6):hover{
+body>header nav>ul>li:nth-child(6):hover{
   border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-6) 50%, transparent 100%) 1;
 }
 
-
-
-
-
-
-
-
-/* nav>ul>li::after{
-  content: 'ggggg';
-  border-bottom: 2px solid;
-  width:inherit;
-} */
-/* nav>ul>li:nth-child(1):hover{
-  border-image: linear-gradient(to right, transparent 0%, var(--polaroidColor-1) 50%, transparent 100%) 1;
-  transform-origin: center;
-  /* border-color: var(--polaroidColor-1); */ */
-
-}
-nav::before{
+body>header nav::before{
   content: "\f0c9";
   font-family: FontAwesome;
   font-size: 2em;
   padding: 0.5em;
   color: #cccccc;
 }
-nav:hover>ul{
+body>header nav:hover>ul{
   display: flex;
 }
 
@@ -188,11 +168,11 @@ li>a:hover{
 
 /* основная часть */
 
-  article{
+.main-index article{
   padding: 2em 0;
 }
 
-article section{
+.main-index article section{
   background-color: black;
   width: 80%;
   height: 24em;
@@ -202,7 +182,7 @@ article section{
   overflow: hidden;
   box-shadow: 0 0 60px 0 rgba(0,0,0,0.18);
 }
- article section>h1{
+.main-index article section>h1{
   position: absolute;
   color: black;
   padding-top: 15.8em;
@@ -210,32 +190,32 @@ article section{
   width: 100%;
   transition-duration: 0.5s;
 }
-article section>h1:hover{
+.main-index article section>h1:hover{
   transform: scaleX(1.1);
   transition: 0.5s;
   transform-origin: 0 100%;
 }
 
 
-article section>h1>a>span::after{
+.main-index article section>h1>a>span::after{
   content: "\f0a9";
   font-family: FontAwesome;
   font-size: 0.8em;
   padding-left: 0.8em;
 }
-article section:nth-child(1) h1>a:hover{
+.main-index article section:nth-child(1) h1>a:hover{
   color:var(--polaroidColor-1);
 }
-article section:nth-child(2) h1>a:hover{
+.main-index article section:nth-child(2) h1>a:hover{
   color:var(--polaroidColor-2);
 }
-article section:nth-child(3) h1>a:hover{
+.main-index article section:nth-child(3) h1>a:hover{
   color:var(--polaroidColor-3);
 }
-article section:nth-child(4) h1>a:hover{
+.main-index article section:nth-child(4) h1>a:hover{
   color:var(--polaroidColor-4);
 }
-article section:nth-child(5) h1>a:hover{
+.main-index article section:nth-child(5) h1>a:hover{
   color:var(--polaroidColor-5);
 }
 
@@ -259,7 +239,7 @@ figure>img{
   transition-duration:0.5s;
 
 }
-article>section:hover .quote-history{
+.main-index article>section:hover .quote-history{
   transform:translateY(-24em);
   transition-duration:0.5s;
 
@@ -349,20 +329,20 @@ footer>section>form>input[type="submit"]:hover{
       max-width: 1000px;
     }
     /* мню навигации */
-    nav{
+    body>header nav{
       font-size: 0.9em;
     }
-    nav>ul{
+    body>header nav>ul{
       display: flex;
       flex-direction: row;
       justify-content:flex-end;
       padding: 0
     }
-    nav>ul>li{
+    body>header nav>ul>li{
       width:auto;
       padding:0.5em 1em;
     }
-    nav::before{
+    body>header nav::before{
     display: none;
     }
     /* header  изображение*/
@@ -384,35 +364,35 @@ footer>section>form>input[type="submit"]:hover{
 
     /* основная часть */
 
-      article{
+    .main-index article{
       padding: 0;
     }
 
-    article section{
+    .main-index article section{
       background-size: cover;
       width: 100%;
       height: 32em;
       border:none;
       box-shadow: 0em 0em 6px 0.1em rgba(0, 0, 0, 0.6)
     }
-    article section:nth-child(1){
+    .main-index article section:nth-child(1){
       background-image: url(../background/background-history.jpg);
     }
-    article section:nth-child(2){
+    .main-index article section:nth-child(2){
       background-image: url(../background/background-facts.jpg);
     }
-    article section:nth-child(3){
+    .main-index article section:nth-child(3){
       background-image: url(../background/background-cameras.jpg);
     }
-    article section:nth-child(4){
+    .main-index article section:nth-child(4){
       background-image: url(../background/background-gallery.jpg);
     }
-    article section:nth-child(5){
+    .main-index article section:nth-child(5){
       background-image: url(../background/background-tehnology.jpg);
     }
 
 
-    article section>h1{
+    .main-index article section>h1{
       width: 23em;
       height: auto;
       padding: 0.5em;
@@ -421,7 +401,7 @@ footer>section>form>input[type="submit"]:hover{
       background-color: var(--backgroundQuotColor);
       font-size: 1em;
     }
-    article section>h1:hover{
+    .main-index article section>h1:hover{
       transform-origin: 50% 50%;
     }
 
@@ -452,7 +432,7 @@ footer>section>form>input[type="submit"]:hover{
       width: 24em;
     }
 
-    article>section:hover .quote-history{
+    .main-index article>section:hover .quote-history{
       transform:translate(26em,-36em);
     }
 
