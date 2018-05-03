@@ -1,0 +1,7 @@
+.main-history img{
+    height: 20em;
+    width: auto;
+    border: 1em solid;
+    border-bottom: 3em solid;
+    border-color: white;
+}
