@@ -17,11 +17,34 @@
     <link rel="stylesheet" href="./style/base.css">
     <link rel="stylesheet" href="./style/history.css">
 
+    <script>
+
+    window.onload = function(){
+      "use strict"
+      var widthAticle=document.querySelector('.main-history article ').clientWidth;
+      var widthImg,  leftImg, i, x;
+
+      document.querySelector('.main-history article ').onclick=function (event){
+         widthImg=event.target.parentNode.parentNode.getBoundingClientRect().width;
+
+         leftImg=event.target.parentNode.parentNode.getBoundingClientRect().left;
+
+         i =event.target.localName;
+
+        if (i==='img'||'iframe'){
+          x = (widthAticle/2 - (widthImg + leftImg) + widthImg/2);
+          document.querySelector('.main-history article ').scrollBy(-x, 0);
+        }
+      }
+    }
+    </script>
+
+
   </head>
   <body>
     <header>
       <div class="header-top">
-        <img src="./image/polaroid_logo.svg" alt="polaroid_logo"/>
+        <a href="index.html"><img src="./image/polaroid_logo.svg" alt="polaroid_logo"/></a>
         <form action="">
           <input type="search" placeholder="Поиск..." name="search">
           <button type="submit" ><span class="fa fa-search"  ></span></button>
@@ -29,7 +52,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="polaroid.html">Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="history.html">История</a></li>
           <li><a href="facts.html">Факты</a></li>
           <li><a href="#">Модели</a></li>
@@ -60,9 +83,11 @@
           <section>
             <div class="header-section-hisrory">
               <h1><time datetime="1926">1926</time></h1>
-              <p>
-                Эдвин Герберт Лэнд, основатель Polaroid, покидает Гарвардский университет после своего первого года обучения, чтобы продолжить собственное исследование поляризации света. Спустя три года Лэнд делает свою первую патентную заявку на поляризаторы, которые уменьшают блики.
-              </p>
+              <span>
+                <p>
+                  Эдвин Герберт Лэнд, основатель Polaroid, покидает Гарвардский университет после своего первого года обучения, чтобы продолжить собственное исследование поляризации света. Спустя три года Лэнд делает свою первую патентную заявку на поляризаторы, которые уменьшают блики.
+                </p>
+              </span>
             </div>
             <div class="image">
               <img src="./history-image/1926.jpg" />
