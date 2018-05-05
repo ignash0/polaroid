@@ -22,21 +22,53 @@
     window.onload = function(){
       "use strict"
       var widthAticle=document.querySelector('.main-history article ').clientWidth;
-      var widthImg,  leftImg, i, x;
+      var widthImg, name,  leftImg,  x;
 
-      document.querySelector('.main-history article ').onclick=function (event){
-         widthImg=event.target.parentNode.parentNode.getBoundingClientRect().width;
+      document.querySelector('.main-history article ').onclick=function (event){function1(), function2()};
+         function function1(){
+          widthImg=event.target.parentNode.parentNode.getBoundingClientRect().width;
 
-         leftImg=event.target.parentNode.parentNode.getBoundingClientRect().left;
+          leftImg=event.target.parentNode.parentNode.getBoundingClientRect().left;
 
-         i =event.target.localName;
+          name =event.target.localName;
 
-        if (i==='img'||'iframe'){
-          x = (widthAticle/2 - (widthImg + leftImg) + widthImg/2);
-          document.querySelector('.main-history article ').scrollBy(-x, 0);
+          if (name==='img'||'iframe'){
+            x = (widthAticle/2 - (widthImg + leftImg) + widthImg/2);
+            var delay = 20, i = 0;
+            var id = setInterval(frame, delay);
+            function frame() {
+              if (i < delay) {
+                document.querySelector('.main-history article ').scrollBy(-x/delay, 0);
+                i++;
+              }
+              else {
+                clearInterval(id);
+              }
+            }
+          }
+        };
+
+        function function2(){
+          name =event.target.localName;
+          var newClass = event.target.parentNode.previousElementSibling;
+          var select = document.querySelectorAll('.header-section-hisrory')
+
+          if (name==='img'||'iframe'){
+            var p=0;
+            for (p = 0; p < select.length; p++){
+              if ( select[p].innerText === newClass.innerText ){
+
+                newClass.setAttribute('style','display:flex');
+              }
+              else{
+                select[p].setAttribute('style','display:none');
+              }
+            }
+            }
         }
       }
-    }
+
+
     </script>
 
 
@@ -206,7 +238,7 @@
             <div class="header-section-hisrory">
               <h1><time datetime="1972">1972</time></h1>
               <p>
-                Ланд демонстрирует революционную систему фотографии, которая включает в себя камеру SX-70 Land, полностью автоматическую, моторизованную, складывающуюся, зеркальную камеру с одним объективом и пленку SX-70 Land, которая автоматически саморазвивается при дневном свете. Сэр Лоуренс Оливье становится представителем камеры Polaroid SX-70 в серии телевизионных, радио и печатных рекламных объявлений. Лэнд с фотоаппаратом в руках был снят на обложку журнала Life, в номере которого была статья посвящённая выходу новой камеры Polaroid SX-70.
+                Ланд демонстрирует революционную систему фотографии, которая включает в себя камеру SX-70 Land, полностью автоматическую, моторизованную, складывающуюся, зеркальную камеру с одним объективом и пленку SX-70 Land. Лэнд с фотоаппаратом в руках был снят на обложку журнала Life, в номере которого была статья посвящённая выходу новой камеры Polaroid SX-70.
               </p>
             </div>
             <div class="image">

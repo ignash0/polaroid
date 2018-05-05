@@ -59,12 +59,13 @@ body{
   border-left: 2px solid;
   padding-left: 1em;
   font-family: 'Caveat', cursive;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .header-section-hisrory{
     display: flex;
     color: #eeee;
     justify-content: flex-start;
+
 }
 .main-history article section{
   padding-bottom:4em;
@@ -118,11 +119,12 @@ body{
       background:none;
       padding: 0;
     }
-    .main-history article section{
-      padding: 4em 5em;
-    }
+    .main-history article section {
+      padding: 4em 3em;
+      position: relative;
+  }
+  .
     .main-history article section p{
-      display: none;
     }
     .main-history nav>ul{
       padding: 0;
@@ -133,5 +135,19 @@ body{
     .main-history nav>ul>li:not(:last-child) {
       border-right: 2px solid #cccc;
     }
+    .header-section-hisrory{
+      position: absolute;
+      width: 38em;
+      display: none;
+      transition: display 0.5s;
+    }
+
+    }
+    .image{
+      padding-top:8em;
+    }
+    .main-history img, .main-history iframe, .empty {
+    height: 18em;
+  }
 
 }
