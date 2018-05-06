@@ -138,11 +138,11 @@ body{
     .header-section-hisrory{
       position: absolute;
       width: 38em;
+      transition:  0.5s;
       display: none;
-      transition: display 0.5s;
     }
 
-    }
+
     .image{
       padding-top:8em;
     }

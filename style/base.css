@@ -6,6 +6,7 @@
   --polaroidColor-5:#00d120;
   --polaroidColor-6:#0077c3;
   --backgroundQuotColor:rgba(245, 242, 242, 0.5);
+  --heightImageGallery:20em;
 }
 
 
@@ -19,6 +20,9 @@ body{
 a{
   text-decoration: none;
   color:black;
+}
+ul{
+    list-style-type: none;
 }
 
 .header-top{
@@ -68,7 +72,7 @@ body>header nav{
   padding:0;
 }
 body>header nav>ul{
-  list-style-type: none;
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -274,12 +278,17 @@ footer>section h1{
 
 footer>section{
   padding:1em 2.5em;
+  flex-basis: 5em;
+
 
 }
 footer>section:first-child{
   /* background-image: linear-gradient(#464545 -10%, #5d5959 20%,#5d5959  80%,#464545 110% ); */
   background-color:#5d5959 ;
-
+  flex-grow: 3;
+}
+footer>section:last-child{
+  flex-grow: 2;
 }
 footer{
   background-color:#464545;
@@ -416,7 +425,7 @@ footer>section>form>input[type="submit"]:hover{
       height:15em;
       border: 1.5em solid white;
       border-bottom: 4.5em solid white;
-      box-shadow: 0 0 60px 0 rgba(0,0,0,0.18);
+      box-shadow:1px 10px 16px 8px rgba(0,0,0,.5);
     }
     figcaption{
       position: relative;
