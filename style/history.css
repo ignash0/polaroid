@@ -1,0 +1,153 @@
+body{
+  min-width: 500px;
+  max-width: 620px;
+}
+.main-history img, .main-history iframe, .empty{
+  height: 22em;
+  width: auto;
+  border: 1em solid;
+  border-bottom: 3em solid;
+  border-color: white;
+  margin-top: 5em;
+  box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75), 14px 16px 37px -3px rgba(0,0,0,0.75);
+}
+.empty{
+  width: 20em;
+  background-color: black;
+  transform: rotate(-13deg);
+  transform-origin: top right;
+  position: relative;
+  right: 2em;
+}
+.main-history nav>ul{
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+  margin: 0;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.main-history nav>ul>li:not(:last-child){
+    border-right: 1px solid black;
+    padding-right: 0.5em;
+}
+.main-history nav>ul>li{
+  padding-left: 0.5em;
+  font-family: 'Caveat', cursive;
+}
+.main-history header{
+  position: sticky;
+  top: 1px;
+  background-color: rgba(204, 204, 204, 0.5);
+  padding: 1em;
+  z-index: 3;
+}
+.main-history{
+    background-image: url(../background/background-history-2.jpg);
+    background-size:contain;
+}
+
+.header-section-hisrory>h1 {
+    margin: 0.5em;
+    font-size: 3em;
+    color: white;
+    font-family: 'Caveat', cursive;
+}
+.header-section-hisrory p{
+  margin: 1em 1em 0 1em;
+  border-left: 2px solid;
+  padding-left: 1em;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2em;
+}
+.header-section-hisrory{
+    display: flex;
+    color: #eeee;
+    justify-content: flex-start;
+
+}
+.main-history article section{
+  padding-bottom:4em;
+}
+.image{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+.image::before, .image::after{
+  content: '';
+  height: 8em;
+  width: 3em;
+  background-color: rgba(74, 198, 44, 0.95);
+  display: block;
+  filter: blur(0.75px);
+  box-shadow: 0px 0px 4px -1px rgba(0,0,0,0.75);
+}
+.image::before {
+    transform: rotate(48deg);
+    transform-origin: bottom left;
+}
+.image::after{
+  transform: rotate(-48deg);
+  transform-origin: bottom right;
+}
+
+@media screen and (min-width: 620px){
+  body{
+    min-width: 620px;
+    max-width: 1300px;
+  }
+
+  .main-history{
+      background-image: url(../background/background-history.jpg);
+      background-repeat: no-repeat;
+      background-size:cover;
+    }
+    .main-history article, .main-history article div[id]{
+      display: flex;
+      flex-direction: row;
+    }
+    .main-history article{
+      overflow-x: scroll;
+      height: 50em;
+    }
+      .main-history header {
+      position: absolute;
+      top: 6em;
+      background:none;
+      padding: 0;
+    }
+    .main-history article section {
+      padding: 4em 3em;
+      position: relative;
+  }
+  .
+    .main-history article section p{
+    }
+    .main-history nav>ul{
+      padding: 0;
+    }
+    .main-history nav>ul>li{
+      font-size:1.5em;
+    }
+    .main-history nav>ul>li:not(:last-child) {
+      border-right: 2px solid #cccc;
+    }
+    .header-section-hisrory{
+      position: absolute;
+      width: 38em;
+      transition:  0.5s;
+      display: none;
+    }
+
+
+    .image{
+      padding-top:8em;
+    }
+    .main-history img, .main-history iframe, .empty {
+    height: 18em;
+  }
+
+}

@@ -1,0 +1,111 @@
+
+body{
+  min-width: 810px;
+  max-width: 1000px;
+}
+.main-gallery nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.main-gallery>nav>ul>li{
+  width: 50%
+}
+.main-gallery>nav>ul>li:last-child{
+  background-color: black;
+}
+.main-gallery>nav>ul>li:first-child{
+    background-image: linear-gradient(to right, var(--polaroidColor-1) 0%, var(--polaroidColor-1) 17%, var(--polaroidColor-2) 17%, var(--polaroidColor-2) 33.5%, var(--polaroidColor-3) 33.5%, var(--polaroidColor-3)  50%, var(--polaroidColor-4)  50%, var(--polaroidColor-4)  66.5%, var(--polaroidColor-5)  66.5%, var(--polaroidColor-5)  83%, var(--polaroidColor-6)  83%,  var(--polaroidColor-6)  100%);
+}
+.main-gallery>nav>ul>li>div{
+  width: 17em;
+  height: var(--heightImageGallery);
+  border: 2px solid;
+  margin: 5em auto;
+  cursor: pointer;
+}
+.color, .black{
+  transition: 0.2s ease-in-out;
+}
+.black{
+  color:white;
+}
+.black:hover{
+  background-color: #eee;
+}
+.black:hover p{
+  background-color: black;
+}
+.color:hover, .black:hover{
+  box-shadow: 0px -4px 81px white;
+  transform: scale(1.01);
+}
+.main-gallery ul li p{
+  height: calc( 100% - 5em );
+  width: calc( 100% - 3em );
+  border: 2px solid;
+  margin: 1em auto;
+  text-align: center;
+  line-height: calc( var(--heightImageGallery) - 5em);;
+  transition: 0.2s ease-in-out;
+  font-weight: bold;
+}
+.colorPolaroid{
+  position: sticky;
+  top:1px;
+}
+
+.colorFilm, .black-whiteFilm,.image{
+  display: none;
+
+}
+.colorFilm, .black-whiteFilm{
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 3em;
+
+}
+.colorFilm>header, .black-whiteFilm>header{
+  position: absolute;
+  top: -3em;
+}
+.main-gallery article> section>header{
+  position: relative;
+}
+.main-gallery article> section>header>h1{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.image{
+  display:none;
+}
+
+
+
+img{
+  height: var(--heightImageGallery);
+}
+
+
+/* section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+} */
