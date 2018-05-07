@@ -21,7 +21,7 @@ body{
     background-image: linear-gradient(to right, var(--polaroidColor-1) 0%, var(--polaroidColor-1) 17%, var(--polaroidColor-2) 17%, var(--polaroidColor-2) 33.5%, var(--polaroidColor-3) 33.5%, var(--polaroidColor-3)  50%, var(--polaroidColor-4)  50%, var(--polaroidColor-4)  66.5%, var(--polaroidColor-5)  66.5%, var(--polaroidColor-5)  83%, var(--polaroidColor-6)  83%,  var(--polaroidColor-6)  100%);
 }
 .main-gallery>nav>ul>li>div{
-  width: 17em;
+  width: calc( var(--heightImageGallery) - 3em);
   height: var(--heightImageGallery);
   border: 2px solid;
   margin: 5em auto;
@@ -33,15 +33,18 @@ body{
 .black{
   color:white;
 }
-.black:hover{
+/* .black:hover{
   background-color: #eee;
 }
 .black:hover p{
   background-color: black;
-}
+} */
 .color:hover, .black:hover{
-  box-shadow: 0px -4px 81px white;
-  transform: scale(1.01);
+  box-shadow: inset 0px -2.4em 0px 1.5em #eeeeee, 0px -4px 81px white;
+  transform: scale(1.02);
+}
+.color:hover p, .black:hover p{
+  box-shadow: 0px -1em 0px 0em #eeeeee;
 }
 .main-gallery ul li p{
   height: calc( 100% - 5em );
@@ -49,13 +52,16 @@ body{
   border: 2px solid;
   margin: 1em auto;
   text-align: center;
-  line-height: calc( var(--heightImageGallery) - 5em);;
   transition: 0.2s ease-in-out;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .colorPolaroid{
   position: sticky;
   top:1px;
+
 }
 
 .colorFilm, .black-whiteFilm,.image{
@@ -67,27 +73,44 @@ body{
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
-  margin-top: 3em;
+  margin: 5em 0;
 
 }
 .colorFilm>header, .black-whiteFilm>header{
   position: absolute;
-  top: -3em;
+  top: -5em;
 }
 .main-gallery article> section>header{
   position: relative;
+  cursor: pointer;
 }
 .main-gallery article> section>header>h1{
   position: absolute;
-  width: 100%;
+  width: 0;
   height: 100%;
   margin: 0;
   font-size: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--backgroundQuotColor);
+  transition: .5s ease;
 }
 
+
+ .colorFilm section:last-child header>h1 {
+  white-space: normal;
+  
+}
+
+.main-gallery article> section>header:hover h1{
+  width:100%;
+  left: 0;
+}
 
 
 
