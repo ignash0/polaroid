@@ -33,7 +33,7 @@
           name =event.target.localName;
           var newClass = event.target.parentNode.previousElementSibling;
           var select = document.querySelectorAll('.header-section-hisrory')
-
+  
           if (name==='img'||'iframe'){
             var p=0;
             for (p = 0; p < select.length; p++){

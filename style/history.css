@@ -67,6 +67,15 @@ body{
     justify-content: flex-start;
 
 }
+.opasity{
+  animation-name: opasity;
+  animation-duration: .5s;
+}
+@keyframes opasity {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
 .main-history article section{
   padding-bottom:4em;
 }
@@ -141,6 +150,7 @@ body{
       transition:  0.5s;
       display: none;
     }
+    
 
 
     .image{
