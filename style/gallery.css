@@ -80,6 +80,9 @@ body{
   position: absolute;
   top: -5em;
 }
+.main-gallery article>section{
+  /* width:100%; */
+}
 .main-gallery article> section>header{
   position: relative;
   cursor: pointer;
@@ -101,7 +104,6 @@ body{
   transition: .5s ease;
 }
 
-
  .colorFilm section:last-child header>h1 {
   white-space: normal;
   
@@ -112,6 +114,56 @@ body{
   left: 0;
 }
 
+.main-gallery article>section>ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 2%;
+  padding-right: 5%;
+}
+
+.main-gallery article>section>ul>li{
+  width: 12%;
+  height: auto;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.main-gallery article>section>ul>li>img{
+  width: 150%;
+  height: auto;
+  cursor:zoom-in;
+}
+.main-gallery article>section>ul>li>img:focus{
+  height:var(--heightImageGallery);
+  width: auto; 
+}
+
+.main-gallery article>section>ul>li:hover{
+  z-index: 3;
+  transform: scale(1.2);
+  filter: saturate(2);
+  
+}
+.main-gallery article>section>ul{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: center;
+align-items: center;
+padding-left: 2%;
+padding-right: 8%;
+position: fixed;
+z-index: 5;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+background: black;
+margin: 0;
+/* pointer-events: none; */
+
+}
 
 
 .image{

@@ -17,8 +17,19 @@ window.onload=function(){
 
   }
 
-  document.querySelector('section header img').onclick=function (event){
+  document.querySelector('.main-gallery ').onclick=function (event){
+    var classesImage = document.querySelectorAll('.image');
     var tar=event.target.parentNode.nextElementSibling;
-    tar.setAttribute('style','display:block');
+    var all_h1 = document.querySelectorAll('.main-gallery section h1');
+    var i;
+    for (i = 0; i < classesImage.length; i++){
+      if (event.target.innerHTML === all_h1[i].innerHTML){
+        tar.setAttribute('style','display:flex');
+      }
+      else{
+        classesImage[i].setAttribute('style','display:none')
+      }
+    }
+    
   }
 }
