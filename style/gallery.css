@@ -1,7 +1,10 @@
 
 body{
-  min-width: 810px;
-  max-width: 1000px;
+  min-width: 620px;
+  max-width: 1300px;
+}
+img{
+  height: var(--heightImageGallery);
 }
 .main-gallery nav ul{
   display: flex;
@@ -40,7 +43,7 @@ body{
   background-color: black;
 } */
 .color:hover, .black:hover{
-  box-shadow: inset 0px -2.4em 0px 1.5em #eeeeee, 0px -4px 81px white;
+  box-shadow: inset 0px -2.4em 0px 1.5em #eeeeee, 0px -4px 81px 16px white;
   transform: scale(1.02);
 }
 .color:hover p, .black:hover p{
@@ -80,12 +83,10 @@ body{
   position: absolute;
   top: -5em;
 }
-.main-gallery article>section{
-  /* width:100%; */
-}
 .main-gallery article> section>header{
   position: relative;
   cursor: pointer;
+  padding: 1em;
 }
 .main-gallery article> section>header>h1{
   position: absolute;
@@ -114,15 +115,6 @@ body{
   left: 0;
 }
 
-.main-gallery article>section>ul{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 2%;
-  padding-right: 5%;
-}
-
 .main-gallery article>section>ul>li{
   width: 12%;
   height: auto;
@@ -134,21 +126,17 @@ body{
   height: auto;
   cursor:zoom-in;
 }
-.main-gallery article>section>ul>li>img:focus{
-  height:var(--heightImageGallery);
-  width: auto; 
-}
 
 .main-gallery article>section>ul>li:hover{
   z-index: 3;
   transform: scale(1.2);
-  filter: saturate(2);
-  
 }
+
 .main-gallery article>section>ul{
-display: flex;
+display: none;
 flex-direction: row;
 flex-wrap: wrap;
+justify-content: center;
 align-content: center;
 align-items: center;
 padding-left: 2%;
@@ -159,28 +147,48 @@ top: 0;
 bottom: 0;
 right: 0;
 left: 0;
-background: black;
+background:var(--backgroundQuotColor);
 margin: 0;
-/* pointer-events: none; */
+cursor: pointer;
+}
 
+.li-click{
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+}
+
+.li-img-click{
+  height: calc(var(--heightImageGallery) * 2) !important;
+  width: auto !important;
+  position: absolute;
+  cursor: default !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%,-50%);
+}
+.close{
+  display: none;
+  color: red;
+  top: 8%;
+  left: 85%;
+  position: absolute;
+  border-radius: 50% 50%;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 620px){
+  .main-gallery article>section>ul>li {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 800px){
+  .main-gallery article>section>ul>li {
+    width: 13%;
+  }
 }
 
 
-.image{
-  display:none;
-}
 
-
-
-img{
-  height: var(--heightImageGallery);
-}
-
-
-/* section{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-} */
