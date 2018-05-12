@@ -34,13 +34,7 @@ window.onload=function(){
       if (event.target.innerHTML === all_h1[i].innerHTML){
         tar.setAttribute('style','display:flex');
       }
-      // else{
-      //   classesImage[i].setAttribute('style','display:none')
-      // }
 
-      // else{
-        //   event.target.parentNode.parentNode.setAttribute('style', 'display:none')
-        // }
       }
       
       if (event.target.localName === 'img' && event.target.parentNode.localName === 'li'){
@@ -59,10 +53,27 @@ window.onload=function(){
       if (event.target.className === 'image') {
         event.target.setAttribute('style', 'display:none');
       }
-   
-
-
   }
+ 
 
+    var scrolled;
+    var time;
+    
+    document.querySelector('.to-top').onclick = function() {
+        scrolled = window.pageYOffset;
+        scrollUp();
+    }
+    function scrollUp(){
+        if (scrolled > 0){
+            window.scrollTo(0, scrolled);
+            scrolled = scrolled - 150;
+            time = setTimeout(scrollUp, 20);
+        }
+        else{
+            clearTimeout(time);
+            window.scrollTo(0, 0)
+        }
+    }
+    
   
 }

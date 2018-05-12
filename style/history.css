@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'LIFEISSTRANGERU';
+  src: url('../font/LIFEISSTRANGERU.ttf');
+  }
+  @font-face {
+    font-family: "BeerRegular";
+    src: url("../fonts/BeerRegular/BeerRegular.eot");
+    src: url("../fonts/BeerRegular/BeerRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/BeerRegular/BeerRegular.woff") format("woff"),
+    url("../fonts/BeerRegular/BeerRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 body{
   min-width: 500px;
   max-width: 620px;
@@ -34,8 +47,13 @@ body{
 }
 .main-history nav>ul>li{
   padding-left: 0.5em;
-  font-family: 'Caveat', cursive;
 }
+.main-history nav>ul>li, .header-section-hisrory>h1, .header-section-hisrory p{
+  font-family: 'BeerRegular';
+  line-height: 1.05em
+
+}
+
 .main-history header{
   position: sticky;
   top: 1px;
@@ -52,13 +70,11 @@ body{
     margin: 0.5em;
     font-size: 3em;
     color: white;
-    font-family: 'Caveat', cursive;
 }
 .header-section-hisrory p{
   margin: 1em 1em 0 1em;
   border-left: 2px solid;
   padding-left: 1em;
-  font-family: 'Caveat', cursive;
   font-size: 1.2em;
 }
 .header-section-hisrory{
@@ -120,7 +136,7 @@ body{
     }
     .main-history article{
       overflow-x: scroll;
-      height: 50em;
+      height: 46em;
     }
       .main-history header {
       position: absolute;

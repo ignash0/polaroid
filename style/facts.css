@@ -1,0 +1,80 @@
+.main-facts figure>img{
+    height: 100%;
+    width: 100%;
+    background-color: #fdf7eb;
+
+}
+.main-facts {
+    margin: 0 auto;
+}
+.main-facts section{
+    
+}
+
+.main-facts section figure{
+    float: right;
+    margin: 1em 2em;
+    width: 28%;
+    min-width: 8em;
+    box-shadow:1px 10px 16px 8px rgba(0,0,0,.5);
+    transition: 0.5s;
+}
+.main-facts section:nth-child(2n+1) figure{
+    float: left;
+}
+.main-facts section:nth-child(2n+1) figure:hover, .main-facts section:nth-child(2n) figure:hover {
+    position: absolute;
+    transform: scale(1.5);
+    z-index: 5;
+    transition: 0.5s;
+    transform-origin: 0 0;
+}
+.main-facts section:nth-child(2n) figure:hover, .main-facts section figure:nth-child(2):hover{
+    right: 0;
+    transform-origin: 100% 50%;
+}
+
+.main-facts section figure figcaption{
+    color: inherit;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.3em;
+    background-color: #fdf7eb;
+}
+.main-facts section figure:nth-child(2){
+    float: right;
+
+}
+.main-facts h1{
+    text-align: center;
+    margin: 0;
+    padding: 1.5em 1em;
+    color: #4e4c4c;
+}
+.main-facts section h1{
+    background-image: linear-gradient(var(--polaroidColor-1) 0%, var(--polaroidColor-1) 17%, var(--polaroidColor-2) 17%, var(--polaroidColor-2) 33.5%, var(--polaroidColor-3) 33.5%, var(--polaroidColor-3) 50%, var(--polaroidColor-4) 50%, var(--polaroidColor-4) 66.5%, var(--polaroidColor-5) 66.5%, var(--polaroidColor-5) 83%, var(--polaroidColor-6) 83%, var(--polaroidColor-6) 100%);
+    position: sticky;
+    top: 0;
+}
+.main-facts section p{
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 1.4em;
+    margin: 0;
+    min-width: 20em;
+    padding: 0.5em;
+}
+
+.text-image{
+    padding: 1.5em 0;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 21em;
+}
+
+@media screen and (max-width: 620px){
+    .main-facts section:nth-child(2n+1) figure:hover, .main-facts section:nth-child(2n) figure:hover {
+        transform: scale(2);
+    }
+}
+    
